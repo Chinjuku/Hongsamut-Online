@@ -1,10 +1,10 @@
 # HongsamutIT
-This Project for Database IT Year 2 Semester 1
+This Project for ISAD ISUS IT Year 2 Semester 1
 
 # Document
-https://docs.google.com/document/d/1l4Nc42dZJi1f7pT1HTpcsZPc6O8qMNz-qIaiBiZTFpk/edit?usp=sharing
+https://docs.google.com/document/d/1-WfQLJefivdPWYH6oSg87dJkJzfEDDd2YRj4Sd_oBBk/
 
-# Web
-https://hongsamutit2.iservkmitl.tech/
+<!-- # Web
+https://hongsamutit2.iservkmitl.tech/ -->
 
 
