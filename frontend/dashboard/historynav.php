@@ -1,3 +1,8 @@
+<?php
+    include './showhistory.php';
+    $show = new ShowHistory();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,7 +52,23 @@
 </head>
 <body>
             <div class="select">
-                <a href="historyborrow.php" class="navhistory bor">View BORROW</a>
+                <button id="toggleButton">VIEW BORROW</button>
+                <div class="hidden-component" id="componentToToggle">
+                    <?php
+                        $show->showBorrowHistory();
+                    ?>
+                </div>
+                <script>
+                    document.getElementById('toggleButton').addEventListener('click', function () {
+                        var component = document.getElementById('componentToToggle');
+                        if (component.style.display === 'none' || component.style.display === '') {
+                            component.style.display = 'block';
+                        } else {
+                            component.style.display = 'none';
+                        }
+                    });
+                </script>
+                <a href="historyBorrow.php" class="navhistory bor">View BORROW</a>
                 <a href="historypayment.php"class="navhistory pay">View PAYMENT</a>
             </div>
 </body>

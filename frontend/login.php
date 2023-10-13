@@ -1,7 +1,3 @@
-<!-- <?php
-    // include "layout/navbar.php";
-    // include 'layout/page.php';
-?> -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,9 +8,6 @@
     <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
-<!-- <div class="back"> -->
-            <!-- <h2><a href="../frontend/index.php"><i class="fa fa-backward" aria-hidden="true"></i>Back</a></h2>
-</div> -->
     <div class="main">
         <h1>login</h1>
         <form action="../backend/login.php" method="post">

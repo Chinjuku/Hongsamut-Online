@@ -1,7 +1,3 @@
-<?php
-    // session_start();
-    include './layout/page.php';
-?>
 <!DOCTYPE html>
 <html>
 <head>
