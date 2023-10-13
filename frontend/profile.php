@@ -76,7 +76,7 @@
                 ?>
             </div>
             <form action="../backend/logout.php" class="log">
-            <!-- <button type="submit"> Logout </button> -->
+            <button type="submit"> Logout </button>
             </form>
         </div>
     </div>
