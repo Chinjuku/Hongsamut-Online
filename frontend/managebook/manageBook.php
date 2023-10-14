@@ -1,6 +1,5 @@
 <?php
-    // session_start();
-    include 'database.php';
+    include '../database/database.php';
     $book_name = $_POST['bookname'];
     $book_owner = $_POST['bookowner'];   
     $cate_id = $_POST['cate_id']; //รับมาจากไอดีหมวดหมู่ 1-7 (เบ็ดเตล็ด == 8 - ค่าเริ่มต้น)
@@ -21,4 +20,3 @@
         exit();
     }
 ?>
-//kuay2

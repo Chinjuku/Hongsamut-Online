@@ -1,7 +1,7 @@
 <?php
     include './layout/navbar.php';
     include './layout/page.php';
-    include '../backend/database.php';
+    include './database/database.php';
 ?>
 
 <!DOCTYPE html>

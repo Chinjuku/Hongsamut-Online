@@ -5,6 +5,7 @@
         public function __construct($connection){
             $this->conn = $connection;
         }
+
         public function viewPaymentHistory(){
             // include '../backend/database.php';
             $sql = "SELECT * FROM payments";
