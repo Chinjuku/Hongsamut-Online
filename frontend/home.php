@@ -2,8 +2,9 @@
 //เรียก header
 include './recommended/recommended.php';
 include './recommended/homePage.php';
+include './database/database.php';
 
-$page = new recommended();
+$page = new recommended($conn);
 $homepage = new homePage();
 
 $homepage->setTitle("HONGSAMUT");

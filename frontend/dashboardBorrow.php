@@ -2,7 +2,8 @@
     // session_start();
     include './layout/navbar.php';
     include './dashboard/showdashboard.php';
-    $dashpage = new showDashboard();
+    include './database/database.php';
+    $dashpage = new showDashboard($conn);
 ?>
 
 <!DOCTYPE html>

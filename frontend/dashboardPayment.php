@@ -1,7 +1,8 @@
 <?php
     include './layout/navbar.php';
     include './dashboard/showdashboard.php';
-    $dash = new showDashboard();
+    include './database/database.php';
+    $dash = new showDashboard($conn);
 ?>
 
 <!DOCTYPE html>

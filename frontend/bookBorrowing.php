@@ -2,7 +2,8 @@
     // session_start();
     include './layout/navbar.php';
     include './bookborrowing/showBookBorrowing.php';
-    $showborrow = new showBookBorrowing();
+    include './database/database.php';
+    $showborrow = new showBookBorrowing($conn);
 ?>
 
 <!DOCTYPE html>

@@ -1,15 +1,20 @@
 <?php
     class showBookBorrowing {
+        private $conn;
+
+        public function __construct($connection){
+            $this->conn = $connection;
+        }
         public function viewBorrowing(){
             // echo '<h1>' + "bugraiwa" + '</h1>';
-            include '../backend/database.php';
+            
             $sql = "SELECT b.book_name, c.category_name, bb.date_borrow, bb.date_return, b.imgsrc
                     FROM borrow_books bb
                     INNER JOIN books b ON bb.book_id = b.book_id
                     INNER JOIN categories c ON b.cate_id = c.cate_id
                     WHERE bb.user_id = '{$_SESSION['user_id']}' AND bb.date_return > CURDATE()";
             
-            $result = $conn->query($sql);
+            $result = $this->conn->query($sql);
             
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
@@ -30,10 +35,9 @@
             }
         }
         public function countBorrowing(){
-            include '../backend/database.php';
             // create bottom bar that increaseing when user borrow book
             $sql = "SELECT * FROM borrow_books WHERE user_id = '{$_SESSION['user_id']}' AND date_return > CURDATE()";
-            $result = $conn->query($sql);
+            $result = $this->conn->query($sql);
             $count = 0;
             if ($result->num_rows > 0) {
                 while($row = $result->fetch_assoc()) {
@@ -44,7 +48,7 @@
             //get max number of book that user can own.
             $plan_id = $_SESSION['plan_id'];
             $num_book = "SELECT * FROM subscription_plans WHERE plan_id = '{$plan_id}'";
-            $num_book_stmt = $conn->query($num_book);
+            $num_book_stmt = $this->conn->query($num_book);
             $num_book_row = $num_book_stmt->fetch_assoc();
             $max_book = $num_book_row['max_book'];
             // create circle that increaseing when user borrow book
