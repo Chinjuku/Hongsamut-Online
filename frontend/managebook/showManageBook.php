@@ -3,8 +3,7 @@
         public function addBook(){
             // ob_start();
             ?>
-            <form action="./managebook/addbook.php" method="post" enctype="multipart/form-data">
-            
+            <form action="./managebook/manageBook.php" method="post" enctype="multipart/form-data">
             <input type="text" name="bookname" class="box" placeholder="Enter your book name" required>
             <input type="text" name="bookowner" class="box" placeholder="Enter author" required>
             <input type="url" name="imgsrc" class="box" placeholder="Enter your url image" required>
@@ -26,8 +25,6 @@
                     <option value=12 name="cate_id">Romance</option>
                 </select>
             </div>
-            <!-- ทำเป็นselector -->
-            <!-- <input type="file" accept="image/jpg, image/jpeg, image/png" class="box1" name="imgsrc" id='file' required> -->
             <div>
                 <input type="submit" value="add book" name="add_book" class="btn">
             </div>
