@@ -7,7 +7,6 @@
         }
         public function viewBorrowing(){
             // echo '<h1>' + "bugraiwa" + '</h1>';
-            
             $sql = "SELECT b.book_name, c.category_name, bb.date_borrow, bb.date_return, b.imgsrc
                     FROM borrow_books bb
                     INNER JOIN books b ON bb.book_id = b.book_id

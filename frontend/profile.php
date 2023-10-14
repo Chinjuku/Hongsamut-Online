@@ -5,8 +5,6 @@
     include './profile/showprofile.php'; 
     $profile = new showprofile($conn);
     echo $profile->Header();
-
-
 ?>
 
 <body>
@@ -18,7 +16,7 @@
         <div class="profile-box">
             <?php
                 echo $profile->userData($_SESSION['user_name'],$_SESSION['first_name'],$_SESSION['last_name'],$_SESSION['phone_num'],$_SESSION['email'],$_SESSION['password'],$_SESSION['plan_id'],$_SESSION['user_name']);
-            $profile->logout();
+                echo $profile->logout();
             ?>
         </div>
     </div>
