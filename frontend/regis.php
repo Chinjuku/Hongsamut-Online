@@ -13,7 +13,7 @@
 <body>
 <div class="container">
 <?php
-    $showRegister->showInfo()
+    $showRegister->showInfo();
 
 ?>
     </div>

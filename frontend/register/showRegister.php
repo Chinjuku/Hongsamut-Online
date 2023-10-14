@@ -8,7 +8,8 @@
         // }
         
         public function showInfo(){
-            ob_start()?>
+            // ob_start()
+            ?>
             <form class="page" action="./registration.php" method="post">
             <!-- /db-project/backend/userconnect.php -->
             <h3 class="lbb">Sign up</h3>
@@ -60,7 +61,7 @@
             <button type="submit" class="button mar" value="submit">CREATE ACCOUNT</button>
         </form>
         <?php
-        return ob_get_clean();
+        // return ob_get_clean();
             
         }
 
