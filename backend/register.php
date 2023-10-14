@@ -1,6 +1,6 @@
 <?php
     // session_start();
-    include 'database.php';
+    include './database/database.php';
 
     $username = $_POST["user_name"];
     $firstname = $_POST["first_name"];
