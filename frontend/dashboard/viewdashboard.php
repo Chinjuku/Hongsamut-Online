@@ -1,7 +1,7 @@
 <?php
     class viewDashboard {
         public function viewPaymentHistory(){
-            include '../../backend/database.php';
+            include '../backend/database.php';
             $sql = "SELECT * FROM payments";
             $result = $conn->query($sql);
 
@@ -22,7 +22,7 @@
         }
         
         public function viewBorrowHistory(){
-            include '../../backend/database.php';
+            include '../backend/database.php';
             $sql = "SELECT * FROM borrow_books";
             $result = $conn->query($sql);
 

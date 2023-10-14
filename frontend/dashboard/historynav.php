@@ -48,7 +48,7 @@
 <body>
             <div class="select">
                 <a href="dashboardBorrow.php" class="navhistory bor">View BORROW</a>
-                <a href="dashboardPayment.php"class="navhistory pay">View PAYMENT</a>
+                <a href="dashboardPayment.php" class="navhistory pay">View PAYMENT</a>
             </div>
 </body>
 </html>
