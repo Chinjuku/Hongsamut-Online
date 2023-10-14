@@ -1,15 +1,15 @@
 <?php
     class showRegister{
-        private $conn;
+        // private $conn;
         
-        public function __construct($connection)
-        {
-            $this->conn = $connection;
-        }
+        // public function __construct($connection)
+        // {
+        //     $this->conn = $connection;
+        // }
         
         public function showInfo(){
             ob_start()?>
-            <form class="page" action="../backend/register.php" method="post">
+            <form class="page" action="./registration.php" method="post">
             <!-- /db-project/backend/userconnect.php -->
             <h3 class="lbb">Sign up</h3>
             

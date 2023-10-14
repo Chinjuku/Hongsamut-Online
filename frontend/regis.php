@@ -1,6 +1,6 @@
 <?php
     include "./register/showRegister.php";
-    $showRegister = new showRegister($conn);
+    $showRegister = new showRegister();
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +13,7 @@
 <body>
 <div class="container">
 <?php
-    // $showRegister->showInfo()
+    $showRegister->showInfo()
 
 ?>
     </div>
