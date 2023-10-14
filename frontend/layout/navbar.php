@@ -188,7 +188,7 @@
                     $check_type = $_SESSION['user_type'];
                     if($check_type == 1) {
                         echo "<a href='member.php'>MEMBER</a>";
-                        echo "<a href='backpack.php' style='--i:2;'>BACKPACK</a>";
+                        echo "<a href='bookBorrowing.php' style='--i:2;'>BOOK BORROWING</a>";
                     }
                 ?>
                 

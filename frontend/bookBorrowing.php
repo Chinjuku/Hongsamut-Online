@@ -1,7 +1,8 @@
 <?php
+    // session_start();
     include './layout/navbar.php';
-    include './dashboard/showdashboard.php';
-    $dash = new showDashboard();
+    include './bookborrowing/showBookBorrowing.php';
+    $showborrow = new showBookBorrowing();
 ?>
 
 <!DOCTYPE html>
@@ -9,7 +10,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>HONGSAMUT</title>
-        <link rel="stylesheet" href="./css/historypage.css">
+        <link rel="stylesheet" href="css/backpack.css">
         <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/">
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Krub:wght@300;400;500;600;700&family=Mitr:wght@200;300;400;500;600;700&display=swap" 
@@ -43,27 +44,46 @@
         />
     </head>
     <body>
+        <?php
+            if ($_SESSION['user_id'] == NULL) {
+                echo '<script>window.location.href = "login.php";</script>';
+            }
+        ?>
         <div class="main">
             <div class="mid">
-                <?php
-                    include './dashboard/historynav.php';
-                ?>
-                <div class="payment"><h2 style="font-size: 50px;text-align: center;">History of Payment</h2></div>
+                <div class="mybackpack">MY BACKPACK</div>
+                <!-- <div class="mybackpackdes">my borrowing books!</div> -->
                 <table class="table2">
                     <thead>
                         <tr>
-                        <th>USERNAME</th>
-                        <th>PAID</th>
-                        <th>DATE</th>
+                        <th>COVER</th>
+                        <th>TITLE</th>
+                        <th>CATEGORY</th>
+                        <th>STARTED</th>
+                        <th>FINISHED</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <?php
-                            echo $dash->viewPaymentHistory()
-                        ?>
+                            <?php
+                                $showborrow->viewBorrowing();
+                            ?>
                     </tbody>
-                </table>
-            </div>
 
-        </div>
+                    
+                </table>
+                <hr>
+
+            <div class="bottombar">
+                <div class="container">
+                    <div class="borrowing">BORROWING
+                        <?php
+                            $showborrow->countBorrowing();
+                        ?>
+                    </div> 
+                </div>
+                
+            </div>
+        </div>    
+
     </body>
+</html>

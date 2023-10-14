@@ -1,17 +1,20 @@
 <?php
 //เรียก header
-include 'layout/recommended.php';
+include './recommended/recommended.php';
+include './recommended/homePage.php';
 
 $page = new recommended();
-$page->setTitle("HONGSAMUT");
-$page->addStylesheet("css/home.css");
-$page->addStylesheet("plugins/bootstrap/css/bootstrap.min.css");
+$homepage = new homePage();
+
+$homepage->setTitle("HONGSAMUT");
+$homepage->addStylesheet("css/home.css");
+$homepage->addStylesheet("plugins/bootstrap/css/bootstrap.min.css");
 
 // Include navigation and sidebar
-$page->include('layout/navbar.php');
-$page->include('layout/sidebar.php');
+$homepage->include('layout/navbar.php');
+$homepage->include('layout/sidebar.php');
 
-echo $page->renderHeader();
+echo $homepage->renderHeader();
 ?>
 
 <div class="main">
@@ -22,7 +25,7 @@ echo $page->renderHeader();
         </div>
         <div class="container">
             <?php
-            $page->includeNewBooks();
+                $page->NewBook();
             ?>
         </div>
         <br>

@@ -1,5 +1,5 @@
 <?php
-    class viewDashboard {
+    class showDashboard {
         public function viewPaymentHistory(){
             include '../backend/database.php';
             $sql = "SELECT * FROM payments";

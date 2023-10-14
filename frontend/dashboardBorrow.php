@@ -1,8 +1,8 @@
 <?php
     // session_start();
     include './layout/navbar.php';
-    include './dashboard/viewdashboard.php';
-    $dashpage = new viewDashboard();
+    include './dashboard/showdashboard.php';
+    $dashpage = new showDashboard();
 ?>
 
 <!DOCTYPE html>
